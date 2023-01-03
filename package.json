@@ -12,6 +12,7 @@
   "license": "ISC",
   "dependencies": {
     "@lyrasearch/lyra": "^0.3.1",
+    "@lyrasearch/plugin-data-persistence": "^0.0.4",
     "@msgpack/msgpack": "^2.8.0",
     "destr": "^1.2.2",
     "fast-json-parse": "^1.0.3",
