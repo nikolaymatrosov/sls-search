@@ -2,10 +2,18 @@
   "compilerOptions": {
     "module": "es2022",
     "target": "es2022",
-    "sourceMap": true,
-    "moduleResolution": "NodeNext"
+    "outDir": "build",
+    "moduleResolution": "NodeNext",
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+    "strict": true,
+    "skipLibCheck": true,
+    "resolveJsonModule": true
   },
   "exclude": [
     "node_modules"
+  ],
+  "include": [
+    "src"
   ]
 }

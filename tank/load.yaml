@@ -1,0 +1,27 @@
+phantom:
+  address: functions.yandexcloud.net:443 # [Target's address]:[target's port]
+  ssl: true
+  # Use your func id
+  uris:
+    - /d4e***?term=%D0%BF%D0%B8%D0%B2%D0%BE
+    - /d4e***?term=%D0%B0%D0%BD%D0%BA%D0%B0
+    - /d4e***?term=%D1%88%D1%82%D1%80%D0%B8%D0%BB%D0%B8%D1%86
+    - /d4e***?term=%D0%BF%D0%B5%D1%82%D1%8C%D0%BA%D0%B0
+    - /d4e***?term=%D0%B2%D0%BE%D0%B2%D0%BE%D1%87%D0%BA%D0%B0
+    - /d4e***?term=%D0%B1%D0%BE%D0%B3
+    - /d4e***?term=%D0%B6%D0%BE%D0%BF%D0%B0
+  load_profile:
+    load_type: rps # schedule load by defining requests per second
+    schedule: const(10, 1m) # starting from 1rps growing linearly to 10rps during 1 minute
+  header_http: "1.1"
+  headers:
+    - "[Host: functions.yandexcloud.net]"
+    - "[User-Agent: tank]"
+    - "[Accept: */*]"
+autostop:
+  autostop:
+    - http(4xx,25%,10)
+console:
+  enabled: true # enable console output
+telegraf:
+  enabled: false # let's disable telegraf monitoring for the first time
